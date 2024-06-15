@@ -1,0 +1,15 @@
+.contact {
+    border: 1px solid wheat;
+    border-radius: 10px;
+    width: 250px;
+    padding: 16px;
+}
+.btn {
+            width: 68px;
+            height: 24px;
+            border-radius: 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            opacity: 0.5;
+}

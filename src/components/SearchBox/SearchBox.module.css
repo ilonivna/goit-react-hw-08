@@ -1,0 +1,28 @@
+.searchBox {
+    margin-top: 20px;
+    width: 400px;
+    border: 1px solid whitesmoke;
+    height: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.input {
+    width: 98%;
+}
+
+.btn {
+    width: 112px;
+        height: 44px;
+        border-radius: 10px;
+        border: none;
+        background-color: green;
+        color: white;
+        opacity: 0.9;
+}
