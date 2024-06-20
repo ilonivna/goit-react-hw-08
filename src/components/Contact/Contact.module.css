@@ -11,7 +11,7 @@
             border: none;
             background-color: red;
             color: white;
-            opacity: 0.5;
+            opacity: 1;
 }
 
 .btnEdit {
@@ -19,7 +19,13 @@
         height: 24px;
         border-radius: 10px;
         border: none;
-        background-color: #7d74f9;
+        background-color: #7169dc;
         color: white;
-        opacity: 0.5;
+        opacity: 1;
+}
+
+.btnContainer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
 }

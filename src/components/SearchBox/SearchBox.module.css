@@ -1,10 +1,9 @@
 .searchBox {
     margin-top: 20px;
-    width: 400px;
+    width: 250px;
     border: 1px solid whitesmoke;
     height: auto;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -14,7 +13,12 @@
 }
 
 .input {
-    width: 98%;
+    width: 250px;
+        height: 20px;
+        background-color: transparent;
+        border-radius: 10px;
+        color: aliceblue;
+        box-shadow: 6px 4px 26px 1px rgb(248, 219, 248);
 }
 
 .btn {

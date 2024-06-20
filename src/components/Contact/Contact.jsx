@@ -22,9 +22,10 @@ export default function Contact({  name, id, number }) {
             <div>
             <p><IoPerson />{name}</p>
             <p><MdLocalPhone />
-{number}</p></div>
+                    {number}</p></div>
+            <div className={css.btnContainer}>
             <button className={css.btn} onClick={handleDelete}>Delete</button>
-            <button className={css.btnEdit} onClick={handleEdit}>Edit</button>
+            <button className={css.btnEdit} onClick={handleEdit}>Edit</button></div>
         </div>
     )
 }

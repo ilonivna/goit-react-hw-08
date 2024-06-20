@@ -7,7 +7,7 @@ export default function HomePage() {
     return (
         <div className={css.container}>
         <DocumentTitle>Home</DocumentTitle>
-            <h1 className={css.title}>This is Your Personal Contact Assitant</h1>
+            <h1 className={css.title}>This is Your Personal Contact Assistant</h1>
             <img className={css.image} src={welcome} alt="Penguin sayin' welcome" />
             </div>
     )

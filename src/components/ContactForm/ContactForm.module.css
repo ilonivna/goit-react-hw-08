@@ -13,7 +13,12 @@ border-radius: 10px;
 }
 
 .input {
-width: 98%;
+width: 250px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: aliceblue;
+    box-shadow: 6px 4px 26px 1px rgb(241, 223, 241);
 }
 
 .error {
@@ -34,26 +39,4 @@ width: 112px;
     opacity: 0.9;
 }
 
-/* .disabledButton {
-width: 112px;
-height: 44px;
-border-radius: 10px;
-border: none;
-background-color: 'gray';
-color: 'white';
-cursor: 'not-allowed';
-box-shadow: 0px 0px 10px 0px grey,
-}
-
-
-.enabledButton {
-width: 112px;
-height: 44px;
-border-radius: 10px;
-        border: none;
-background-color: 'green';
-    color: 'white';
-    cursor: 'pointer';
-    box-shadow: 0px 0px 10px 0px grey,
-} */
 
