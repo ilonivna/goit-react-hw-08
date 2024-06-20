@@ -19,7 +19,7 @@ export default function ContactsPage() {
         <div>
         <DocumentTitle>Contacts</DocumentTitle>
             <p>Your personal assistant has fetched your contacts.</p>
-            <ContactEditor />
+         {/* <ContactEditor /> */}
             {isLoading && <Loader />}
             <ContactList/>
         </div>
