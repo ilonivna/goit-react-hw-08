@@ -13,3 +13,13 @@
             color: white;
             opacity: 0.5;
 }
+
+.btnEdit {
+    width: 68px;
+        height: 24px;
+        border-radius: 10px;
+        border: none;
+        background-color: #7d74f9;
+        color: white;
+        opacity: 0.5;
+}

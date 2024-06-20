@@ -1,0 +1,12 @@
+.linkList {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 8px;
+}
+
+.link {
+    color: white;
+    text-shadow: 8px 2px 7px #C20FCE;
+    font-size: 1.4em;
+}

@@ -1,5 +1,4 @@
-.searchBox {
-    margin-top: 20px;
+.form {
     width: 400px;
     border: 1px solid whitesmoke;
     height: auto;
@@ -17,12 +16,21 @@
     width: 98%;
 }
 
-.btn {
-    width: 112px;
-        height: 44px;
-        border-radius: 10px;
-        border: none;
-        background-color: rgb(99, 182, 255);
-        color: white;
-        opacity: 0.9;
+.error {
+    color: red;
 }
+
+.labelContainer {
+    width: 98%;
+}
+
+.formBtn {
+    width: 112px;
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    opacity: 0.9;
+}
+

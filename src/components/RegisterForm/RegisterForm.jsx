@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations"; 
 import toast, { Toaster } from 'react-hot-toast';
 import { useId } from "react";
+import css from "./RegisterForm.module.css";
 
 
 export default function RegisterForm() {
@@ -43,25 +44,25 @@ export default function RegisterForm() {
                 }}
                 onSubmit={handleSubmit}
                 validationSchema={ValidationSchema}>
-                <Form>
-                    <div>
-                        <label htmlFor={nameFieldId}>Name</label>
-                        <Field type="text" name="name" id={nameFieldId}></Field>
-                        <ErrorMessage name="name" component="span"/>
+                <Form className={css.form}>
+                    <div className={css.container}>
+                        <label className={css.labelContainer} htmlFor={nameFieldId}>Name</label>
+                        <Field className={css.input} type="text" name="name" id={nameFieldId}></Field>
+                        <ErrorMessage className={caches.error} name="name" component="span"/>
                     </div>
-                    <div>
-                        <label htmlFor={emailFieldId}>Email</label>
-                        <Field type="email" name="email" id={emailFieldId}></Field>
-                        <ErrorMessage name="email" component="span"/>
-                    </div>
-
-                    <div>
-                        <label htmlFor={passwordFieldId}>Password</label>
-                        <Field type="password" name="password" id={passwordFieldId}></Field>
-                        <ErrorMessage name="password" component="span"/>
+                    <div className={css.container}>
+                        <label className={css.labelContainer} htmlFor={emailFieldId}>Email</label>
+                        <Field className={css.input} type="email" name="email" id={emailFieldId}></Field>
+                        <ErrorMessage className={caches.error} name="email" component="span"/>
                     </div>
 
-                    <button type="submit">Register</button>
+                    <div className={css.container}>
+                        <label className={css.labelContainer} htmlFor={passwordFieldId}>Password</label>
+                        <Field className={css.input} type="password" name="password" id={passwordFieldId}></Field>
+                        <ErrorMessage className={caches.error} name="password" component="span"/>
+                    </div>
+
+                    <button className={css.formBtn} type="submit">Register</button>
                 </Form>
             </Formik>
         </div>

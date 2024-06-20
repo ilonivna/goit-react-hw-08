@@ -2,14 +2,17 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DocumentTitle from "../../components/DocumentTitle/DocumentTitle";
 import ContactList from "../../components/ContactList/ContactList";
-// import ContactEditor from "../../components/ContactEditor/ContactEditor";
+import ContactEditor from "../../components/ContactEditor/ContactEditor";
 import { fetchContacts } from "../../redux/contacts/operations";
 import { selectLoading } from "../../redux/contacts/selectors";
 import Loader from "../../components/Loader/Loader";
+import { selectVisibleContacts } from "../../redux/contacts/selectors";
+import SearchBox from "../../components/SearchBox/SearchBox";
 
 export default function ContactsPage() {
     const dispatch = useDispatch();
     const isLoading = useSelector(selectLoading);
+    const visibleContacts = useSelector(selectVisibleContacts);
 
     useEffect(() => {
         dispatch(fetchContacts());
@@ -18,9 +21,11 @@ export default function ContactsPage() {
     return (
         <div>
         <DocumentTitle>Contacts</DocumentTitle>
-            <p>Your personal assistant has fetched your contacts.</p>
-         {/* <ContactEditor /> */}
+            
+            <ContactEditor /> 
             {isLoading && <Loader />}
+            {visibleContacts.length > 0 ? <p>Your personal assistant has fetched your contacts.</p> : <p>No contacts yet! Add a few..</p>}
+            {visibleContacts. length > 0 && <SearchBox/>}
             <ContactList/>
         </div>
     )
