@@ -27,9 +27,10 @@ export default function ContactsPage() {
             <ContactEditor /> 
             {isLoading && <Loader />}
             {visibleContacts.length > 0 ? <p>Your personal assistant has fetched your contacts.</p> : <p>No contacts yet! Add a few..</p>}
-            {visibleContacts.length > 0 && <SearchBox />}
-           <ModalWindow/>
-            <ContactList/>
+            <SearchBox />
+           
+            <ContactList />
+            <ModalWindow />
         </div>
     )
 }
