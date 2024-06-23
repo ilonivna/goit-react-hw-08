@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations"; 
 import toast, { Toaster } from 'react-hot-toast';
 import { useId } from "react";
-import css from "./RegisterForm.module.css";
+import css from "./RegistrationForm.module.css";
 
 
-export default function RegisterForm() {
+export default function RegistrationForm() {
     const emailFieldId = useId();
     const passwordFieldId = useId();
     const nameFieldId = useId();
