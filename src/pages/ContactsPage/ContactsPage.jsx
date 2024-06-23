@@ -8,6 +8,8 @@ import { selectLoading } from "../../redux/contacts/selectors";
 import Loader from "../../components/Loader/Loader";
 import { selectVisibleContacts } from "../../redux/contacts/selectors";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import ModalWindow from "../../components/Modal/ModalWindow";
+
 
 export default function ContactsPage() {
     const dispatch = useDispatch();
@@ -25,7 +27,8 @@ export default function ContactsPage() {
             <ContactEditor /> 
             {isLoading && <Loader />}
             {visibleContacts.length > 0 ? <p>Your personal assistant has fetched your contacts.</p> : <p>No contacts yet! Add a few..</p>}
-            {visibleContacts. length > 0 && <SearchBox/>}
+            {visibleContacts.length > 0 && <SearchBox />}
+           <ModalWindow/>
             <ContactList/>
         </div>
     )

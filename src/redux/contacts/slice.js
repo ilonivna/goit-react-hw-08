@@ -17,7 +17,25 @@ const slice = createSlice({
     initialState: {
         items: [],
         loading: false,
+        isModalOpen: false,
+        activeContact: null,
         error: false,
+    },
+    reducers: {
+        openModal(state) {
+            state.isModalOpen = true;
+        },
+        closeModal(state) {
+            state.isModalOpen = false;
+        },
+        setActiveContact(state, action) {
+            state.activeContact = action.payload;
+            state.isModalOpen = true;
+        },
+        clearActiveContact(state) {
+            state.activeContact = null;
+            state.isModalOpen = false;
+        }
     },
     extraReducers: builder => {
         builder
@@ -38,14 +56,17 @@ const slice = createSlice({
                 state.items = state.items.filter(item => item.id !== action.payload.id);
             })
             .addCase(deleteContact.rejected, handleRejected)
+            .addCase(editContact.rejected, handleRejected)
+            .addCase(editContact.pending, handlePending)
             .addCase(editContact.fulfilled, (state, action) => {
-                const index = state.items.findIndex(contact => contact.id === action.payload.id);
-                if (index !== -1) {
-                    state.items[index] = action.payload;
-                }
-            })
+                state.loading = false;
+                state.error = null;
+                const index = state.items.findIndex((contact) => contact.id === action.payload.id);
+                state.items[index] = action.payload;
+        })
         }
     }
 );
 
 export const contactsReducer = slice.reducer;
+export const { setActiveContact, clearActiveContact, openModal, closeModal } = slice.actions;

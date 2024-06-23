@@ -1,9 +1,11 @@
 import css from "./Contact.module.css"
 import { IoPerson } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from "../../redux/contacts/operations.js";
-import { openModal } from "../../redux/modal/slice.js";
+import { setActiveContact, clearActiveContact } from "../../redux/contacts/slice.js";
+import { selectIsModalOpen } from "../../redux/contacts/selectors.js";
+
 
 
 
@@ -14,9 +16,17 @@ export default function Contact({  name, id, number }) {
         dispatch(deleteContact(id));
     }
 
+    const isModalOpen = useSelector(selectIsModalOpen);
+
     const handleEdit = () => {
-        dispatch(openModal(id));
-    }
+        if (!isModalOpen) {
+            dispatch(setActiveContact({ name, number, id }));
+        } else {
+            clearActiveContact();
+        }
+    };
+    
+
     return (
         <div className={css.contact}>
             <div>

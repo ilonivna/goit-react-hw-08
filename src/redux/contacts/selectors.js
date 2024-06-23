@@ -12,6 +12,9 @@ export const selectError = (state) => {
     state.contacts.error;
 }
 
+export const selectIsModalOpen = (state) => state.contacts.isModalOpen;
+export const selectActiveContact = (state) => state.contacts.activeContact;
+
 export const selectVisibleContacts = createSelector(
     [selectContacts, selectFilter],
     (contacts, contactsFilter) => {
